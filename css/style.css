@@ -97,3 +97,60 @@ b{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: justify;
   }
+
+
+
+
+
+<!--- update for mobile demo -->
+/* Default layout for desktop/laptop */
+.wrapper {
+    display: flex;
+}
+
+.leftColumn {
+    width: 25%;
+}
+
+.rightColumn {
+    width: 75%;
+    padding: 20px;
+}
+
+/* Mobile layout (screen width <= 768px) */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: block;
+    }
+
+    .leftColumn {
+        display: none; /* Hide the left column by default */
+    }
+
+    .menu-button {
+        display: block; /* Show the menu button */
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #13b3b3;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 1000;
+        font-size: 16px;
+    }
+
+    .leftColumn.popup {
+        display: block; /* Show the left column as a popup */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 999;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+    }
+}
